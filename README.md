@@ -1,4 +1,4 @@
-# Matrix Public Archive
+# Matrix Public Archive (Stealth Edition)
 
 <a href="https://matrix.to/#/#matrix-public-archive:matrix.org"><img src="https://img.shields.io/matrix/matrix-public-archive:matrix.org.svg?label=%23matrix-public-archive%3Amatrix.org&logo=matrix&server_fqdn=matrix.org" alt="Join the community and get support at #matrix-public-archive:matrix.org" /></a>
 
@@ -7,7 +7,7 @@ Gitter](https://github.com/vector-im/roadmap/issues/26), the goal is to make a
 public archive site for `world_readable` Matrix rooms like Gitter's archives
 which search engines can index and keep all of the content accessible/available.
 
-#### Try it out: [archive.matrix.org](https://archive.matrix.org/) 🌌
+#### Try it out: [matrix-archive.evulid.cc](https://matrix-archive.evulid.cc/) 🌌
 
 <!-- prettier-ignore -->
 Room directory homepage | Archive room view
@@ -16,7 +16,7 @@ Room directory homepage | Archive room view
 
 ## Demo videos
 
-- [![](https://user-images.githubusercontent.com/558581/206083768-d18456de-caa3-463f-a891-96eed8054686.png) May 2023](https://www.youtube.com/watch?v=4KlNILNItGQ&t=1046s): Introducing [archive.matrix.org](https://archive.matrix.org/), the shiny new public instance of the Matrix Public Archive that everyone can share and link to.
+- [![](https://user-images.githubusercontent.com/558581/206083768-d18456de-caa3-463f-a891-96eed8054686.png) May 2023](https://www.youtube.com/watch?v=4KlNILNItGQ&t=1046s): Introducing [matrix-archive.evulid.cc](https://matrix-archive.evulid.cc/), the shiny new public instance of the Matrix Public Archive that everyone can share and link to.
 - [![](https://user-images.githubusercontent.com/558581/206083768-d18456de-caa3-463f-a891-96eed8054686.png) Aug 2022](https://www.youtube.com/watch?v=6KHQSeJTXm0&t=583s) ([blog post](https://matrix.org/blog/2022/08/05/this-week-in-matrix-2022-08-05#matrix-public-archive-website)): A quick intro of what the project looks like, the goals, what it accomplishes, and how it's a new portal into the Matrix ecosystem.
 - [![](https://user-images.githubusercontent.com/558581/206083768-d18456de-caa3-463f-a891-96eed8054686.png) Oct 2022](https://www.youtube.com/watch?v=UT6KSEqDUf8&t=548s): Showing off the room directory landing page used to browse everything available in the archive.
 

@@ -3,7 +3,7 @@
 ## Can I run my own instance?
 
 Yes! We host a public canonical version of the Matrix Public Archive at
-[archive.matrix.org](https://archive.matrix.org/) that everyone can use but feel free to
+[matrix-archive.evulid.cc](https://matrix-archive.evulid.cc/) that everyone can use but feel free to
 also run your own instance (setup instructions in the [readme](../README.md)).
 
 ## How is this different from [`view.matrix.org`](https://view.matrix.org/)?
@@ -34,7 +34,7 @@ Forbidden` in that case.
 
 The Matrix Public Archive doesn't hold onto any data (it's
 stateless) and requests the messages from the homeserver every time. The
-[archive.matrix.org](https://archive.matrix.org/) instance has some caching in place, 5
+[matrix-archive.evulid.cc](https://matrix-archive.evulid.cc/) instance has some caching in place, 5
 minutes for the current day, and 2 days for past content.
 
 The Matrix Public Archive only allows rooms with `world_readable` history visibility to
