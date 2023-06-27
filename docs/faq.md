@@ -54,19 +54,6 @@ Guest access is also a much different ask than read-only access since guests can
 send messages in the room which isn't always desirable. The archive bot is read-only and
 does not send messages.
 
-## How do I opt out and keep my room from being indexed by search engines?
-
-Only public Matrix rooms with `shared` or `world_readable` history visibility are
-accessible to view in the Matrix Public Archive. But only rooms with history visibility
-set to `world_readable` are indexable by search engines.
-
-Also see https://github.com/matrix-org/matrix-public-archive/issues/47 to track better
-opt out controls.
-
-As a workaround for [archive.matrix.org](https://archive.matrix.org/) today, you can ban
-the `@archive:matrix.org` user if you don't want your room content to be shown in the
-archive at all.
-
 ## Technical details
 
 The main readme has a [technical overview](../README.md#technical-overview) of the
