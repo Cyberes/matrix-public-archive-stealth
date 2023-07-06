@@ -155,7 +155,6 @@ const fetchRoomData = traceFunction(async function (
     stateCanonicalAliasResDataOutcome,
     stateAvatarResDataOutcome,
     stateHistoryVisibilityResDataOutcome,
-    stateJoinRulesResDataOutcome,
     predecessorInfoOutcome,
     successorInfoOutcome,
   ] = await Promise.allSettled([
@@ -182,10 +181,6 @@ const fetchRoomData = traceFunction(async function (
         abortSignal,
       }
     ),
-    fetchEndpointAsJson(getStateEndpointForRoomIdAndEventType(roomId, 'm.room.join_rules'), {
-      accessToken: matrixAccessToken,
-      abortSignal,
-    }),
     fetchPredecessorInfo(matrixAccessToken, roomId, { abortSignal }),
     fetchSuccessorInfo(matrixAccessToken, roomId, { abortSignal }),
   ]);
@@ -215,15 +210,15 @@ const fetchRoomData = traceFunction(async function (
   }
 
   let historyVisibility;
+  let historyVisibilityEventMeta;
   if (stateHistoryVisibilityResDataOutcome.reason === undefined) {
     const { data } = stateHistoryVisibilityResDataOutcome.value;
     historyVisibility = data?.content?.history_visibility;
-  }
-
-  let joinRule;
-  if (stateJoinRulesResDataOutcome.reason === undefined) {
-    const { data } = stateJoinRulesResDataOutcome.value;
-    joinRule = data?.content?.join_rule;
+    historyVisibilityEventMeta = {
+      historyVisibility,
+      sender: data?.sender,
+      originServerTs: data?.origin_server_ts,
+    };
   }
 
   let roomCreationTs;
@@ -251,7 +246,7 @@ const fetchRoomData = traceFunction(async function (
     canonicalAlias,
     avatarUrl,
     historyVisibility,
-    joinRule,
+    historyVisibilityEventMeta,
     roomCreationTs,
     predecessorRoomId,
     predecessorLastKnownEventId,

@@ -19,40 +19,22 @@ messages from any given date and day-by-day navigation.
 
 ## Why did the archive bot join my room?
 
-Only public Matrix rooms with `shared` or `world_readable` [history
-visibility](https://spec.matrix.org/latest/client-server-api/#room-history-visibility) are
-accessible in the Matrix Public Archive. In some clients like Element, the `shared`
-option equates to "Members only (since the point in time of selecting this option)" and
-`world_readable` to "Anyone" under the **room settings** -> **Security & Privacy** ->
-**Who can read history?**.
+Only Matrix rooms with `world_readable` [history
+visibility](https://spec.matrix.org/latest/client-server-api/#room-history-visibility)
+are accessible in the Matrix Public Archive and indexed by search engines.
 
 But the archive bot (`@archive:matrix.org`) will join any public room because it doesn't
-know the history visibility without first joining. Any room without `world_readable` or
-`shared` history visibility will lead a `403 Forbidden`. And if the public room is in
-the room directory, it will be listed in the archive but will still lead to a `403
-Forbidden` in that case.
+know the history visibility without first joining. Any room that doesn't have
+`world_readable` history visibility will lead a `403 Forbidden`.
 
 The Matrix Public Archive doesn't hold onto any data (it's
 stateless) and requests the messages from the homeserver every time. The
 [matrix-archive.evulid.cc](https://matrix-archive.evulid.cc/) instance has some caching in place, 5
 minutes for the current day, and 2 days for past content.
 
-The Matrix Public Archive only allows rooms with `world_readable` history visibility to
-be indexed by search engines. See the [opt
-out](#how-do-i-opt-out-and-keep-my-room-from-being-indexed-by-search-engines) topic
-below for more details.
-
-### Why does the archive user join rooms instead of browsing them as a guest?
-
-Guests require `m.room.guest_access` to access a room. Most public rooms do not allow
-guests because even the `public_chat` preset when creating a room does not allow guest
-access. Not being able to view most public rooms is the major blocker on being able to
-use guest access. The idea is if I can view the messages from a Matrix client as a
-random user, I should also be able to see the messages in the archive.
-
-Guest access is also a much different ask than read-only access since guests can also
-send messages in the room which isn't always desirable. The archive bot is read-only and
-does not send messages.
+See the [opt out
+section](#how-do-i-opt-out-and-keep-my-room-from-being-indexed-by-search-engines) below
+for more details.
 
 ## Technical details
 
