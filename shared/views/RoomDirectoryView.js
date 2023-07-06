@@ -124,7 +124,7 @@ class RoomDirectoryView extends TemplateView {
       ),
       t.h3(
         { className: 'RoomDirectoryView_subHeader' },
-        'Web View (stealth edition)'
+        'Web View (<a href="https://github.com/Cyberes/matrix-public-archive-stealth/" target="_blank">stealth edition</a>)'
       ),
       t.div({ className: 'RoomDirectoryView_search' }, [
         t.svg(
