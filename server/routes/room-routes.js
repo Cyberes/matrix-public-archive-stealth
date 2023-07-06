@@ -896,7 +896,7 @@ router.get(
       shouldIndex = false;
     } else {
       // Otherwise we only allow search engines to index `world_readable` rooms
-      shouldIndex = roomData?.historyVisibility === `world_readable`;
+      shouldIndex = true;
     }
 
     const isNsfw = checkTextForNsfw(
